@@ -15,4 +15,4 @@ import { Post, PostSchema } from '../post/schema/post.schema';
   controllers: [UserController],
   providers: [UserService],
 })
-export class CategoryModule {}
+export class UserModule {}

@@ -15,4 +15,4 @@ import { User, UserSchema } from '../user/schema/user.schema';
   controllers: [PostController],
   providers: [PostService],
 })
-export class ProductModule {}
+export class PostModule {}
