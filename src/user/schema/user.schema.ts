@@ -1,16 +1,17 @@
+
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
 @Schema({ toJSON: { virtuals: true }, toObject: { virtuals: true } })
-export class Category extends Document {
+export class User extends Document {
   @Prop({ required: true })
   name: string;
 }
 
-export const CategorySchema = SchemaFactory.createForClass(Category);
+export const UserSchema = SchemaFactory.createForClass(User);
 
-CategorySchema.virtual('products', {
-  ref: 'Product',
+UserSchema.virtual('posts', {
+  ref: 'Post',
   localField: '_id',
-  foreignField: 'category',
+  foreignField: 'author',
 });
